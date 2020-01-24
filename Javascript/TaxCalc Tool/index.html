@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!-- 
+    Author: Joseph Morrison
+    Date: 01/20/2020
+    Class: CIT 253 Data Driven Webpages
+    Description: Web app that accepts user input, calls JS method 
+    to compute taxes, returns and prints taxes back to form.  
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Tax Table Program: Decision Blocks
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>
+        Tax Table Program: Decision Blocks
+    </h1>
+    <table>
+        <tr>
+            <th>Taxable Income From</th>
+            <th>Up to but not including</th>
+            <th>Tax is</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>$27,050</td>
+            <td>15% of the income</td>
+        </tr>
+        <tr>
+            <td>$27,050</td>
+            <td>$65,550</td>
+            <td>$4,057.50 + (27.5% of the amount over $27,050)</td>
+        </tr>
+        <tr>
+            <td>$65,550</td>
+            <td>$136,750</td>
+            <td>$14,654.00 + (30.5% of the amount over $65,550</td>
+        </tr>
+        <tr>
+            <td>$136,750</td>
+            <td>$297,350</td>
+            <td>$36,361.00 + (35.5% of the amount over $136,750)</td>
+        </tr>
+        <tr>
+            <td>$297,350 and up</td>
+            <td></td>
+            <td>$39,375.00 + (39.1% of the amount over $297.350)</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <form name="taxForm">
+        Tax calculator
+        <br>
+        <p><input type="text" name="taxCalc" id="income"> Input your income</p>
+        <p><input type="button" value="Calculate Tax" onclick="getTaxRate()" id="button1">
+            <input type="reset" value="Clear"></p>
+        <p><input type="text" name="calculatedTax">Taxes Owed</p>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
